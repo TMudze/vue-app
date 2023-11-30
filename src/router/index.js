@@ -15,6 +15,10 @@ import Dashboard from "../views/dashboard/dashboard/Vnud-Dashboard.vue";
 // Tables Pages
 import RegularTables from "../views/dashboard/tables/RegularTables.vue";
 import ExtendedTables from "../views/dashboard/tables/ExtendedTables.vue";
+//import ExtendedTables1 from "../views/dashboard/tables/New/ExtendedTables_1.vue";
+
+import Table1 from "../views/dashboard/tables/Table1.vue";
+import Table2 from "../views/dashboard/tables/Table2.vue";
 
 let tablesMenu = {
   path: "/table-list",
@@ -31,6 +35,16 @@ let tablesMenu = {
       path: "extended",
       name: "Extended Tables",
       components: { default: ExtendedTables, header: DefaultHeader },
+    },
+    {
+      path: "table1",
+      name: "Table1",
+      components: { default: Table1, header: DefaultHeader },
+    },
+    {
+      path: "table2",
+      name: "Table2",
+      components: { default: Table2, header: DefaultHeader },
     }
   ],
 };

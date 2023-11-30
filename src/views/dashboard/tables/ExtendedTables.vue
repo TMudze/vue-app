@@ -1,8 +1,35 @@
 <template>
   <div>
     <div class="row">
+      <div>
+          <!--drop-down tag="div" class="float-left">
+            <base-button type="info" class="pull-left compact">
+              <i class="far fa-edit"></i> Edit
+            </base-button>
+            <ul class="dropdown-menu dropdown-menu-left">
+              <a href="#" class="dropdown-item">Send SMS - App. received</a>
+            </ul>
+          </drop-down-->
+
+          <!--base-button style="margin-right:10px" type="default" class="pull-left compact btn-simple" @click="edit.modal = true">
+            <i class="far fa-edit"></i> Edit
+          </base-button>
+
+          <base-button style="margin-right:30px" type="default" class="pull-left compact btn-simple" @click="deleteMany">
+            <i class="fas fa-trash-alt"></i> Delete
+          </base-button-->
+
+          <!--base-button :loading="loading.onHold" style="margin-right:10px" type="info" class="pull-left compact" @click="onHold()">
+            Put Emails On Hold
+          </base-button>
+
+          <base-button :loading="loading.delay" style="margin-right:10px" type="info" class="pull-left compact" @click="delayReminders()">
+            Delay Reminder
+          </base-button-->
+        </div>
       <div class="col-md-12">
         <vnud-card>
+          <div><n-button loading disabled type="info" size="lg">Info</n-button></div>
           <template v-slot:header>
             <div>
               <h4 class="card-title">{{ tablename }}</h4>
@@ -10,7 +37,7 @@
             </div>
           </template>
 
-          <table-component :tableColumns="tableColumns2" :tableData="tableData2"></table-component>
+          <table-component :tableColumns="tableColumns2" :tableData="tableData"></table-component>
         </vnud-card>
       </div>
     </div>
@@ -20,6 +47,8 @@
 import { ElTable, ElTableColumn } from "element-plus";
 import { Checkbox } from "@/components";
 import TableComponent from "./ExtendedTables/TableComponent";
+//import data from "./data.js"
+import * as allData from "./data.js"
 export default {
   components: {
     [ElTable.name]: ElTable,
@@ -29,6 +58,9 @@ export default {
   },
   data() {
     return {
+      data1: allData.tableData1,
+      data2: allData.tableData2,
+      tableData: allData.tableData2,
       tablename: "Table 1",
       tableColumns1: [
         {
@@ -121,6 +153,18 @@ export default {
         },
       ],
     };
+  },
+
+  methods: {
+    delete() {
+      //
+    }
+  },
+
+  mounted () {
+    console.log(this)
+    //console.log(data)
+    //console.log(this.dat)
   },
 };
 </script>

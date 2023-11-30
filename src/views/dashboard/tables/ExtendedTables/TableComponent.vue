@@ -2,6 +2,8 @@
   <div>
     <el-table :data="tableData">
         <el-table-column min-width="50" type="index"></el-table-column>
+        <el-table-column type="selection" width="60" label="#" align="center">
+        </el-table-column>
         <el-table-column
             v-for="column in tableColumns"
             :key="column.label"
@@ -55,9 +57,11 @@ export default {
   props:['tableData', 'tableColumns'],
   data() {
     return {
+      stuff: 'abc'
     };
   },
   mounted () {
+    console.log(this)
     //console.log(this.tableColumns)
     //console.log(this.dat)
   },

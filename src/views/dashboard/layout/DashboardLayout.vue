@@ -14,6 +14,14 @@
         <sidebar-item
           :link="{ name: 'Extended Tables', icon: 'now-ui-icons design_bullet-list-67', path: '/table-list/extended' }"
         ></sidebar-item>
+
+        <sidebar-item
+          :link="{ name: 'Table1', icon: 'now-ui-icons business_chart-pie-36', path: '/table-list/table1' }"
+        ></sidebar-item>
+
+        <sidebar-item
+          :link="{ name: 'Table2', icon: 'now-ui-icons education_atom', path: '/table-list/table2' }"
+        ></sidebar-item>
       </template>
     </side-bar>
     <div class="main-panel">
